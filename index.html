@@ -133,30 +133,30 @@
 
     </style>
 </head>
-<body class="antialiased min-h-screen pb-20">
+<body class="antialiased min-h-screen bg-[#0a0a0a] text-white selection:bg-[#ff5e00] selection:text-white">
+    
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md bg-[#0a0a0a]/80 border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-widest text-white">SATON<span class="text-[#ff5e00]">.</span></a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+                <a href="#about" class="hover:text-[#ff5e00] transition-colors">About</a>
+                <a href="#skills" class="hover:text-[#ff5e00] transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-[#ff5e00] transition-colors">Projects</a>
+            </div>
+            <!-- แก้ไข href เป็นชื่อไฟล์ PDF ของคุณ -->
+            <a href="Saton Poldkord.pdf" target="_blank" class="flex items-center gap-2 bg-[#ff5e00]/10 text-[#ff5e00] border border-[#ff5e00]/50 px-4 py-2 rounded-full hover:bg-[#ff5e00] hover:text-white transition-all text-sm font-semibold">
+                <i data-lucide="download" class="w-4 h-4"></i> <span class="hidden sm:inline">Resume</span>
+            </a>
+        </div>
+    </nav>
+
     <div class="bg-lines"></div>
 
-    <main class="max-w-6xl mx-auto pt-16 md:pt-24 px-6 md:px-12">
+    <main class="max-w-6xl mx-auto pt-28 md:pt-36 px-6 md:px-12 pb-20">
         
         <!-- TOP SECTION: About & Profile -->
-        <section class="flex flex-col-reverse md:flex-row items-start justify-between gap-12 md:gap-8 mb-20 relative z-10">
-            
-            <!-- Left: Text Info -->
-            <div class="flex-1 w-full">
-                <div class="mb-8">
-                    <div class="title-bg mb-8">
-                        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white">About me</h1>
-                    </div>
-                    
-                    <div class="text-gray-400 space-y-4 max-w-lg text-sm md:text-base leading-relaxed">
-                        <p>Hi!</p>
-                        <p>My name is <span class="font-semibold text-white">Saton Poldkord</span> (สาทร ปลอดเกิด).</p>
-                        <p>I am a newly graduated Information System student with demonstrated practical experience in <span class="text-[#ff5e00] font-medium">full-stack software development</span>.</p>
-                        <p>My objective is to build scalable systems, manage databases efficiently, and develop interactive dashboards. I am highly proficient in utilizing AI tools and prompt engineering to optimize code structure and ensure high-quality software delivery.</p>
-                    </div>
-                </div>
-
-                <!-- Contact -->
+        <section id="about" class="flex flex-col-reverse md:flex-row items-start justify-between gap-12 md:gap-8 mb-20 relative z-10 scroll-mt-32">
                 <div class="mt-12">
                     <h2 class="text-2xl font-bold mb-6 text-white border-b border-[#ff5e00]/30 pb-2 inline-block">Contact</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-sm">
@@ -208,7 +208,7 @@
 
 
         <!-- BOTTOM SECTION: Details Card -->
-        <section class="info-card p-8 md:p-14 text-white relative z-10 w-[calc(100%+2rem)] md:w-full">
+        <section id="skills" class="info-card p-8 md:p-14 text-white relative z-10 w-[calc(100%+2rem)] md:w-full scroll-mt-32">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
                 
                 <!-- Left Column -->
@@ -297,7 +297,7 @@
         </section>
 
         <!-- PORTFOLIO / PROJECTS & EXPERIENCE SECTION -->
-        <section class="mt-20 relative z-10 w-full mb-20">
+        <section id="projects" class="mt-20 relative z-10 w-full mb-20 scroll-mt-32">
             <div class="title-bg mb-10">
                 <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white">Experience & Projects</h2>
             </div>
@@ -307,7 +307,8 @@
                 <!-- Project Card 1: Carbon Footprint -->
                 <div class="bg-[#121212] border border-gray-800 rounded-3xl overflow-hidden hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,94,0,0.15)] hover:border-[#ff5e00]/30 transition-all duration-300 flex flex-col group">
                     <div class="relative overflow-hidden h-56">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Carbon Footprint System" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 grayscale group-hover:grayscale-0">
+                        <!-- เปลี่ยนลิงก์ src เป็นไฟล์รูปภาพในเครื่อง และเพิ่ม object-top -->
+                        <img src="carbon-dashboard.png" alt="Carbon Footprint System Dashboard" class="w-full h-full object-cover object-top opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 grayscale group-hover:grayscale-0">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent"></div>
                     </div>
                     
@@ -342,7 +343,7 @@
                         <h3 class="text-xl font-bold mb-2 text-white">IT Support Staff</h3>
                         <p class="text-sm text-gray-400 font-medium mb-4">Bangkok Metropolitan Administration (Mar 2023 - May 2023)</p>
                         <p class="text-gray-400 text-sm mb-6 leading-relaxed flex-1">
-                            ปฏิบัติหน้าที่สนับสนุนงานด้านเทคโนโลยีสารสนเทศที่สำนักเทศกิจ กรุงเทพมหานคร โดยดูแล บำรุงรักษา และซ่อมบำรุงระบบคอมพิวเตอร์และอุปกรณ์ต่อพ่วง พร้อมทั้งช่วยบริหารจัดการและตรวจสอบความพร้อมใช้งานของระบบเครือข่ายเพื่อให้การดำเนินงานของหน่วยงานเป็นไปอย่างราบรื่น
+                            Provided comprehensive IT support, including the maintenance, troubleshooting, and repair of computer systems and peripheral hardware. Assisted in managing and monitoring network infrastructure to ensure seamless and efficient daily operations.
                         </p>
                     </div>
                 </div>
@@ -351,6 +352,13 @@
         </section>
 
     </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 bg-[#050505] py-8 text-center relative z-10">
+        <p class="text-gray-500 text-sm">
+            &copy; 2026 Saton Poldkord. Built with HTML, Tailwind CSS &amp; <i data-lucide="heart" class="w-3 h-3 inline text-[#ff5e00] mx-1 fill-[#ff5e00]"></i>
+        </p>
+    </footer>
 
     <script>
         // Initialize Lucide icons
